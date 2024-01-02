@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML form practice</title>
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      background-color: black;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    input{
+      background-color: rgb(244, 244, 244);
+      border: none;
+    }
+    input:focus{
+      outline: none;
+    }
+    form{
+      width: auto;
+    }
+    a{
+      color: white;
+    }
+    input[type = submit]{
+      background-color: rgb(6, 92, 26);
+      color: white;
+      padding: 8px 10px;
+      border: none;
+      border-radius:5px;
+      margin-top: 12px;
+      float: right;      
+      cursor: pointer;
+    }
+    fieldset{
+      padding: 30px;
+    }
+    td{
+      padding: 5px;
+    }
+    footer{
+      background-color: green;
+      height: 10vh;
+      width: 100%;
+    }
+    
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Login form</legend>
+      <table>
+        <tr>
+          <td>
+          <label for="UserName">UserName</label>
+          </td>
+
+          <td>
+          <input type="text" name="UserName" id="UserName">
+          </td>
+      </tr>
+    <tr>
+      <td>
+        <label for="pwd">Password</label>
+      </td>
+      <td>
+        <input type="password" name="password" id="User_pwd">
+      </td>
+    </tr>
+    <tr>
+        <td><small><a href="#">Change password</a></small></td>
+        <td><input type="submit" value="submit"' onclick="clicker()"></td>
+      
+    </tr>
+  </table>
+    
+  </fieldset>
+  </form>
+
+  <script>
+    function clicker(){
+      let usrname =document.getElementById('UserName').value;
+      let password = document.getElementById('User_pwd').value;
+
+      if(usrname != "Prathmesh" && password !== "123456"){
+        alert("Password or Username incorrect");
+      }else(usrname == "Prathmesh" && password == "123456"){
+        alert("You are logged in " + usrname);
+      }
+      
+    }
+
+    function Changepwd(){ 
+
+    }
+  </script>
+
+  
+</body>
+</html>
